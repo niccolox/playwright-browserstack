@@ -51,7 +51,7 @@ test.describe('Browserstack Inception Nicholas onboarding', () => {
     await page.waitForSelector('text=Sign in',{state:'visible'});
     await page.locator('text=Sign in').first().click();
     await page.waitForSelector('#user_email_login')
-    await page.fill('#user_email_login', process.env.BROWSERSTACK_DEMO_EMAIL );
+    await page.fill('#user_email_login', "nicholas+demo@browserstack.com" );
     await page.fill('#user_password', process.env.BROWSERSTACK_DEMO_PASSWORD );
     await page.locator('#user_submit').click();
     // Start a Live session, as a part of the automation script
@@ -97,9 +97,11 @@ test.describe('Browserstack Inception Nicholas onboarding', () => {
       await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'passed',reason: 'Title matches defined searched term from OCR'}})}`);
     } catch {
       await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'failed',reason: 'Title did not match'}})}`);
-    }    
+    }
+ 
+  });
 
-    await page.waitForTimeout(2000);    
+});
   });
 
 });
