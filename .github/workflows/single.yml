@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest  # Can be self-hosted runner also
     steps:
 
-    - name: Make envfile
-      uses: SpicyPizza/create-envfile@v1.3
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1.3
         with:
           envkey_DEBUG: true
           envkey_BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
