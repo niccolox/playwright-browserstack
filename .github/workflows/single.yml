@@ -17,7 +17,6 @@ jobs:
           file_name: .env
 
       - name: 'see the environment'
-        working-directory: ./playwright-test
         run: cat .env
 
       - name: 'BrowserStack Env Setup'  # Invokes the setup-env action
