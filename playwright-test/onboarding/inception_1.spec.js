@@ -64,9 +64,8 @@ test.describe('Browserstack Inception Nicholas onboarding', () => {
       await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'passed',reason: 'Title matches defined searched term from OCR'}})}`);
     } catch {
       await page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'failed',reason: 'Title did not match'}})}`);
-    }    
-
-    await page.waitForTimeout(2000);    
+    }
+ 
   });
 
 });
