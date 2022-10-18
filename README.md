@@ -15,9 +15,7 @@ npm run test:onboarding
 ```
 ### Github Actions
 
-```
-
-```
+https://github.com/niccolox/playwright-browserstack/actions/workflows/single.yml
 
 ## BrowserStack Inception
 Assignment Duration: 4 hours
