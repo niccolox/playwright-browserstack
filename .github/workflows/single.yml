@@ -46,6 +46,11 @@ jobs:
       - name: 'Running Single test on BrowserStack'
         working-directory: ./playwright-test
         run: npm run test:onboarding   # See sample test script above
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+          BROWSERSTACK_DEMO_EMAIL: ${{ secrets.BROWSERSTACK_DEMO_EMAIL }}
+          BROWSERSTACK_DEMO_PASSWORD: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
