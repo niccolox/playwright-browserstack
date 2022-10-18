@@ -1,8 +1,8 @@
-name: 'BrowserStack Single Test'
+name: 'BrowserStack Single Test Playwright Inception '
 on: [push, pull_request]
 jobs:
   ubuntu-job:
-    name: 'BrowserStack Single Test Cypress Nicholas Amazon Onboarding'
+    name: 'BrowserStack Single Test Playwright Inception Nicholas Onboarding'
     runs-on: ubuntu-latest  # Can be self-hosted runner also
     steps:
 
@@ -30,7 +30,7 @@ jobs:
       #   run: ./node_modules/.bin/http-server -p 8099 &
 
       - name: 'Running Single test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
-        run: npm run test:onboarding   # See sample test script above
+        run: cd playwright-test && npm run test:onboarding   # See sample test script above
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
