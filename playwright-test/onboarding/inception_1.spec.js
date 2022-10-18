@@ -22,6 +22,7 @@ test.describe('Browserstack Inception Nicholas onboarding', () => {
     await page.fill('#user_password', process.env.BROWSERSTACK_DEMO_PASSWORD );
     await page.locator('#user_submit').click();
     // Start a Live session, as a part of the automation script
+    await page.goto('https://live.browserstack.com/dashboard');
     await expect(page).toHaveURL("https://live.browserstack.com/dashboard");
     // Location and click Windows 11  
     await page.locator('[aria-label="Windows 11"]').click();
