@@ -6,13 +6,14 @@ jobs:
     runs-on: ubuntu-latest  # Can be self-hosted runner also
     steps:
 
-      - name: Make envfile
-        uses: SpicyPizza/create-envfile@v1
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v1.3
         with:
-          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          BROWSERSTACK_DEMO_EMAIL: ${{ secrets.BROWSERSTACK_DEMO_EMAIL }}
-          BROWSERSTACK_DEMO_PASSWORD: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
+          envkey_DEBUG: true
+          envkey_BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          envkey_BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+          envkey_BROWSERSTACK_DEMO_EMAIL: ${{ secrets.BROWSERSTACK_DEMO_EMAIL }}
+          envkey_BROWSERSTACK_DEMO_PASSWORD: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
           file_name: .env
 
       - name: 'BrowserStack Env Setup'  # Invokes the setup-env action
