@@ -1,3 +1,4 @@
+require('dotenv').config()
 const base = require('@playwright/test');
 const cp = require('child_process');
 const clientPlaywrightVersion = cp
