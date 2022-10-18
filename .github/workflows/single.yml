@@ -29,6 +29,9 @@ jobs:
       # - name: 'Running application under test'
       #   run: ./node_modules/.bin/http-server -p 8099 &
 
+      - name: 'Change Root'  # Invokes the actual test script that would run on BrowserStack browsers
+        run: cd playwright-test   
+
       - name: 'Running Single test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
         run: npm run test:onboarding   # See sample test script above
 
