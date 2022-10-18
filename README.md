@@ -1,3 +1,14 @@
+# Onboarding
+
+git@github.com:niccolox/playwright-browserstack.git
+
+## BrowserStack Inception
+Assignment Duration: 4 hours
+
+1. Go to www.browserstack.com and log in with your demo account
+2. Start a Live session, as a part of the automation script
+3. Within the Live session, perform a Google search for “BrowserStack”
+
 # playwright-browserstack
 Sample Playwright tests to run on BrowserStack
 

@@ -1,3 +1,30 @@
+# Browserstack Inception
+
+```
+npm run test:onboarding
+```
+
+@todo
+
+* CICD
+* error posting to BS
+* improve Control T Control T workaround
+* find active element in Playwright, whats the Playwright equivalent of Selenium switch into 
+* find better way of navigating device grid on Live
+* handle different pop up scenarios in Live
+
+
+
+<div id="flashParent" style="position: relative; right: 0px; text-align: center; top: 0px; margin: 0px auto; left: 0px; width: 1368px; height: 274px;" class="shown">
+  <object style="width: 2048px; height: 320px; position: absolute; opacity: 0; z-index: 0; left: 3px;" role="none"></object>
+  <audio autoplay="true" id="bslive_audio"></audio>
+  <video autoplay="true" id="bslive_video" style="display: inline-block; float: left; opacity: 1; width: 1368px;"></video>
+  <canvas id="flashlight-overlay" height="320" width="1600" style="left: 0px; width: 1368px; cursor: url(blob:https://live.browserstack.com/c0a3b1c0-474e-4097-94cc-fa99f73bc217) 0 0, auto; height: 274px;"></canvas>
+    <div id="flashlight-box" style="left: 0px; width: 1368px; cursor: url(blob:https://live.browserstack.com/c0a3b1c0-474e-4097-94cc-fa99f73bc217) 0 0, auto; height: 274px;">
+      <div id="flashlight-hidden" contenteditable="true"></div>
+    </div>
+</div>
+
 # Testing with playwright-browserstack in Test Runner
 
 [Playwright](https://playwright.dev/) Integration with BrowserStack.

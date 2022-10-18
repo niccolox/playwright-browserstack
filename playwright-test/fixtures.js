@@ -12,13 +12,13 @@ const caps = {
   browser: 'chrome',
   os: 'osx',
   os_version: 'catalina',
-  name: 'My first playwright test',
-  build: 'playwright-build-1',
+  name: 'Nicholas Browserstack Inception POC OCR 4',
+  build: 'nicholas-playwright-build-2022-POC-OCR-4',
   'browserstack.username': process.env.BROWSERSTACK_USERNAME || 'YOUR_USERNAME',
   'browserstack.accessKey':
     process.env.BROWSERSTACK_ACCESS_KEY || 'YOUR_ACCESS_KEY',
   'browserstack.local': process.env.BROWSERSTACK_LOCAL || false,
-  'client.playwrightVersion': clientPlaywrightVersion,
+  'client.playwrightVersion': clientPlaywrightVersion
 };
 
 exports.bsLocal = new BrowserStackLocal.Local();

@@ -11,8 +11,9 @@
     "chai": "^4.3.4"
   },
   "scripts": {
-    "test": "npm run single && npm run local && npm run parallel && npm run mobile",
+    "test": "npm run single && npm run local && npm run parallel && npm run mobile && npm run onboarding",
     "single": "node single_test.js",
+    "onboarding": "node single_onboarding_test.js",
     "local": "node local_test_using_bindings.js",
     "parallel": "node parallel_test.js",
     "mobile": "node sample_test_on_iPhone.js && node sample_test_on_Pixel.js",
