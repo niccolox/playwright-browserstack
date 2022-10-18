@@ -13,8 +13,8 @@ const caps = {
   browser: 'chrome',
   os: 'osx',
   os_version: 'catalina',
-  name: 'Nicholas Browserstack Inception POC OCR 5 Github Actions',
-  build: 'nicholas-playwright-inception-build-2022-POC-OCR-5 5 Github Actions',
+  name: 'Nicholas Browserstack Inception POC OCR 6 Github Actions',
+  build: 'nicholas-playwright-inception-build-2022-POC-OCR-6 Github Actions',
   'browserstack.username': process.env.BROWSERSTACK_USERNAME || 'YOUR_USERNAME',
   'browserstack.accessKey':
     process.env.BROWSERSTACK_ACCESS_KEY || 'YOUR_ACCESS_KEY',
