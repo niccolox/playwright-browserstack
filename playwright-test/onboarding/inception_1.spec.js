@@ -12,8 +12,8 @@ test.describe('Browserstack Inception Nicholas onboarding', () => {
     await page.waitForSelector('text=Sign in',{state:'visible'});
     await page.locator('text=Sign in').first().click();
     await page.waitForSelector('#user_email_login')
-    await page.fill('#user_email_login', process.env.BROWSERSTACK_DEMO_EMAIL || BROWSERSTACK_DEMO_EMAIL);
-    await page.fill('#user_password', process.env.BROWSERSTACK_DEMO_PASSWORD || BROWSERSTACK_DEMO_PASSWORD);
+    await page.fill('#user_email_login', BROWSERSTACK_DEMO_EMAIL);
+    await page.fill('#user_password', BROWSERSTACK_DEMO_PASSWORD);
     await page.locator('#user_submit').click();
     await expect(page).toHaveURL("https://live.browserstack.com/dashboard");
     await page.locator('[aria-label="Windows 11"]').click();
