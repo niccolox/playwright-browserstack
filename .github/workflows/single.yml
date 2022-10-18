@@ -16,7 +16,7 @@ jobs:
           envkey_BROWSERSTACK_DEMO_PASSWORD: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
           file_name: .env
 
-      - name: 'Building web application to be tested'
+      - name: 'see the environment'
         working-directory: ./playwright-test
         run: cat .env
 
