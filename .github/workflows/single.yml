@@ -1,8 +1,8 @@
-name: 'BrowserStack Single Test Playwright Inception '
+name: 'BrowserStack Playwright Inception '
 on: [push, pull_request]
 jobs:
   ubuntu-job:
-    name: 'BrowserStack Single Test Playwright Inception Nicholas Onboarding'
+    name: 'BrowserStack Playwright Inception Nicholas Onboarding'
     runs-on: ubuntu-latest  # Can be self-hosted runner also
     steps:
 
@@ -26,13 +26,11 @@ jobs:
       - name: 'Building web application to be tested'
         run: npm install
 
-      # - name: 'Running application under test'
-      #   run: ./node_modules/.bin/http-server -p 8099 &
+      # - name: 'Change Root'  # Invokes the actual test script that would run on BrowserStack browsers
+      #   run: cd playwright-test   
 
-      - name: 'Change Root'  # Invokes the actual test script that would run on BrowserStack browsers
-        run: cd playwright-test   
-
-      - name: 'Running Single test on BrowserStack'  # Invokes the actual test script that would run on BrowserStack browsers
+      - name: 'Running Single test on BrowserStack'
+        working-directory: ./playwright-test  # Invokes the actual test script that would run on BrowserStack browsers
         run: npm run test:onboarding   # See sample test script above
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
