@@ -24,13 +24,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 'Building web application to be tested'
+        working-directory: ./playwright-test
         run: npm install
 
       # - name: 'Change Root'  # Invokes the actual test script that would run on BrowserStack browsers
       #   run: cd playwright-test   
 
       - name: 'Running Single test on BrowserStack'
-        working-directory: ./playwright-test  # Invokes the actual test script that would run on BrowserStack browsers
+        working-directory: ./playwright-test
         run: npm run test:onboarding   # See sample test script above
 
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
