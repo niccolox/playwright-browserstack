@@ -1,6 +1,7 @@
 const { test } = require('../fixtures');
 const { expect } = require('@playwright/test');
 const Tesseract = require('tesseract.js');
+import 'dotenv/config';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('https://www.browserstack.com/');
