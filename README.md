@@ -26,6 +26,9 @@ Assignment Duration: 4 hours
 2. Start a Live session, as a part of the automation script
 3. Within the Live session, perform a Google search for “BrowserStack”
 
+## Automate Build deep link
+
+https://automate.browserstack.com/dashboard/v2/builds/6e4c7f5027d7ca11de8196910edf5f1d55eaa5ee/sessions/3934b86b54b0068fd5dbf1886c8e9730d1449c7f
 
 
 ```typescript
