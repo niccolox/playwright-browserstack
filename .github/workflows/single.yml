@@ -16,13 +16,15 @@ jobs:
           envkey_BROWSERSTACK_DEMO_PASSWORD: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
           file_name: .env
 
+      - name: 'Building web application to be tested'
+        working-directory: ./playwright-test
+        run: cat .env
+
       - name: 'BrowserStack Env Setup'  # Invokes the setup-env action
         uses: browserstack/github-actions/setup-env@master
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          email:  ${{ secrets.BROWSERSTACK_DEMO_EMAIL }}
-          password: ${{ secrets.BROWSERSTACK_DEMO_PASSWORD }}
 
       - name: 'BrowserStack Local Tunnel Setup'  # Invokes the setup-local action
         uses: browserstack/github-actions/setup-local@master
