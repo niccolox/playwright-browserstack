@@ -18,9 +18,11 @@ test.describe('Browserstack Inception Nicholas onboarding', () => {
     await page.waitForSelector('text=Sign in',{state:'visible'});
     await page.locator('text=Sign in').first().click();
     await page.waitForSelector('#user_email_login')
-    await page.fill('#user_email_login', "nicholas+demo@browserstack.com" );
+    await page.fill('#user_email_login', process.env.BROWSERSTACK_DEMO_EMAIL );
     await page.fill('#user_password', process.env.BROWSERSTACK_DEMO_PASSWORD );
     await page.locator('#user_submit').click();
+    // check logged into dashboard of any sub domain
+    await expect(page).toContainUrl("browserstack.com/dashboard");
     // Start a Live session, as a part of the automation script
     await expect(page).toHaveURL("https://live.browserstack.com/dashboard");
     // Location and click Windows 11  

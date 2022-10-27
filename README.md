@@ -9,9 +9,17 @@ git@github.com:niccolox/playwright-browserstack.git
 
 Note, Browserstack Inception only works against Browserstack Live and Automate.
 
+add environment variables
+```
+export BROWSERSTACK_DEMO_EMAIL=nicholas+demo@browserstack.com
+export BROWSERSTACK_DEMO_PASSWORD=yourSuperSecurePassword
+```
+
 ```
 cd playwright-test
+npm i
 npm run test:onboarding
+
 ```
 ### Github Actions
 
