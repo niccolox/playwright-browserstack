@@ -66,7 +66,7 @@ test.describe('Browserstack Inception Nicholas onboarding', () => {
     // creates a screenshot with a strong visual signal, a highlight
     await page.keyboard.press('Control+F');    
     await page.keyboard.type('BrowserStack: Most Reliable App & Cross Browser Testing', {delay: 5});
-    await page.waitForTimeout(3000);    
+    await page.waitForTimeout(5000);    
     await page.screenshot({ path: 'serpfind.png' });
 
     // catch OCR results and send to Browserstack Automate Dashboard logs
