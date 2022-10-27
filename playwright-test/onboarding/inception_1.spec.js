@@ -63,6 +63,7 @@ test.describe('Browserstack Inception Nicholas onboarding', () => {
     googleResult = 'Google'
     googleUrl = 'google.com/search?q=Browserstack'
     // in live session select Browserstack link using send keys Control F
+    // creates a screenshot with a strong visual signal, a highlight
     await page.keyboard.press('Control+F');    
     await page.keyboard.type('BrowserStack: Most Reliable App & Cross Browser Testing', {delay: 5});
     await page.waitForTimeout(3000);    
